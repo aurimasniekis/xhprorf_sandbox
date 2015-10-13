@@ -33,15 +33,15 @@ Usage
     	1. Write your script inside `src/script.php` file
     	2. Run profiler
     		
-    		```
-			$ bin/profile
-			```
+    	```
+		$ bin/profile
+		```
 	B. Option B:
 		1. Run profile with argument with your script file
 		
-			```
-			$ bin/profile /some/dir/magic/script.php
-			```
+		```
+		$ bin/profile /some/dir/magic/script.php
+		```
 3. Open view server
 	
 	```
