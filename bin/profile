@@ -3,11 +3,30 @@
 
 ini_set('xhprof.output_dir', __DIR__ . '/../tmp/');
 
+$script = realpath(__DIR__ . '/../src/script.php');
+if (2 === $argc) {
+    $script = $argv[1];
+    $realPath = realpath($script);
+
+    if (false === file_exists($realPath)) {
+        die(
+            sprintf(
+                'Script file at path "%s" does not exist',
+                $script
+            ) . PHP_EOL
+        );
+    }
+
+    $script = $realPath;
+}
+
 require_once __DIR__ . '/../vendor/autoload.php';
+
+echo PHP_EOL . 'Will be profiling script "' . $script . '"' . PHP_EOL . PHP_EOL;
 
 xhprof_enable(XHPROF_FLAGS_CPU + XHPROF_FLAGS_MEMORY);
 
-include __DIR__ . '/../src/script.php';
+include $script;
 
 $xhprofData = xhprof_disable();
 $xhprofRuns = new XHProfRuns_Default();
