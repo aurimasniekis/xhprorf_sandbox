@@ -1,13 +1,13 @@
 #!/usr/bin/env php
 <?php
 
-ini_set('xhprof.output_dir', __DIR__ . '/tmp/');
+ini_set('xhprof.output_dir', __DIR__ . '/../tmp/');
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 xhprof_enable(XHPROF_FLAGS_CPU + XHPROF_FLAGS_MEMORY);
 
-include __DIR__ . '/script.php';
+include __DIR__ . '/../src/script.php';
 
 $xhprofData = xhprof_disable();
 $xhprofRuns = new XHProfRuns_Default();

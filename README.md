@@ -28,21 +28,21 @@ Usage
 	$ composer install
 	```
 	
-2. Write your script inside `script.php` file
+2. Write your script inside `src/script.php` file
 3. Run profiler
 	
 	```
-	$ ./profile
+	$ bin/profile
 	```
 4. Open view server
 	
 	```
-	$ ./view
+	$ bin/view
 	```
 
 5. Open [http://127.0.0.1:9001](http://127.0.0.1:9001)
 6. Clear profile data
 
 	```
-	$ ./clear
+	$ bin/clear
 	```

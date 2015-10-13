@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+BASEDIR=$(cd $(dirname $0);echo $PWD)
+php -d xhprof.output_dir="$BASEDIR/../tmp/" -S 127.0.0.1:9001 -t $BASEDIR/../vendor/lox/xhprof/xhprof_html/
