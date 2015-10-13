@@ -1,0 +1,17 @@
+{
+    "name": "gcds/xhprof_sandbox",
+    "description": "A small sandbox for profiling scripts with xhprof",
+    "type": "sandbox",
+    "require": {
+	"ext-xhprof": "*",
+        "lox/xhprof": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aurimas Niekis",
+            "email": "aurimas.niekis@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
